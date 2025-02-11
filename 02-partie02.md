@@ -1,0 +1,4 @@
+# **Question :**  
+Comment l’Infrastructure as Code (IaC) permet-elle d’automatiser et d’optimiser le déploiement d’infrastructures Big Data tout en garantissant scalabilité, résilience et réduction des erreurs humaines ? 
+
+- Les outils IaC tel AWS CloudFormation et Terraform, automatise le déploiement des infrastructures Big Data en définissant les ressources sous forme de scripts déclaratifs et/ou impératifs. Cela garantit la scalabilité par provisionnement dynamique des ressources et renforce la résilience grâce à la reproductibilité et l’auto-réparation. En réduisant les interventions manuelles, l'IaC minimise les erreurs humaines et accélère les déploiements. L’intégration avec le CI/CD facilite les mises à jour continues. De plus, l’optimisation des coûts et de la maintenance est assurée par une gestion centralisée et versionnée de l’infrastructure.

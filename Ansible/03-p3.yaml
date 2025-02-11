@@ -1,0 +1,13 @@
+---
+- name: Créer un utilisateur
+  hosts: all
+  become: yes
+  vars:
+    utilisateur: "deploy"
+  tasks:
+    - name: Ajouter l'utilisateur
+      ansible.builtin.user:
+        name: "{{ utilisateur }}"
+        shell: /bin/bash
+        create_home: yes
+        state: present

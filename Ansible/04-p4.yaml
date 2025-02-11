@@ -1,0 +1,20 @@
+---
+- name: Installer Docker
+  hosts: all
+  become: yes
+  tasks:
+    - name: Détecter le système d'exploitation
+      setup:
+
+    - name: Installer Docker sur Ubuntu
+      apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+      when: ansible_facts['os_family'] == "Debian"
+
+    - name: Installer Docker sur CentOS
+      yum:
+        name: docker
+        state: present
+      when: ansible_facts['os_family'] == "RedHat"

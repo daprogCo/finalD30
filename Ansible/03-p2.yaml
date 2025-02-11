@@ -1,0 +1,16 @@
+---
+- name: Mettre à jour le système
+  hosts: all
+  become: yes
+  tasks:
+    - name: Mettre à jour le cache des paquets sur Ubuntu
+      apt:
+        update_cache: yes
+        upgrade: dist
+      when: ansible_facts['os_family'] == "Debian"
+
+    - name: Mettre à jour le cache des paquets sur CentOS/RHEL
+      yum:
+        name: "*"
+        state: latest
+      when: ansible_facts['os_family'] == "RedHat"
